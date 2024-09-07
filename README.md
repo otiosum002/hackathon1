@@ -31,6 +31,6 @@ Our mission is to revolutionize travel by making it more accessible and enjoyabl
 ### Polymessenger
 
 1. Navigate to the `translator_app` folder.
-2. Set up your Python environment and install the required dependencies:
+2. Run the Django development server:
    ```bash
-   pip install -r requirements.txt
+   python manage.py runserver
