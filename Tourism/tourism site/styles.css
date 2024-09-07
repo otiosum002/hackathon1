@@ -1,0 +1,894 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffffef;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar .logo h1 {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+/* Banner Section */
+.banner {
+    background: url('360_F_608653136_psrIGDn70ye09kXeepBwZ0f7tbUq5dGd.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.banner-content .btn {
+    padding: 10px 30px;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.banner-content .btn:hover {
+    background-color: #ff9500;
+}
+
+/* Featured Destinations */
+.destinations {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.destination-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+.destination-card p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Trip Planner Section */
+.trip-planner {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.trip-planner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.trip-planner form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.trip-planner label {
+    font-size: 18px;
+}
+
+.trip-planner input,
+.trip-planner select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.trip-planner button {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.trip-planner button:hover {
+    background-color: #ff9500;
+}
+
+.trip-summary {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Map Section */
+.map-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#india-map {
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Top Experiences Section */
+.experiences-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.experiences-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.filter-options {
+  /* Add some padding to create space around the filter options */
+  padding: 20px;
+  /* Use a background color to create a visual separation */
+  background-color: #f7f7f7;
+  /* Add a subtle box shadow to give it some depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Use flexbox to align the buttons horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  /* Use a font size and color that's easy to read */
+  font-size: 16px;
+  color: #337ab7;
+  /* Add some padding to create space around the button text */
+  padding: 10px 20px;
+  /* Use a border radius to give the buttons a rounded corner */
+  border-radius: 5px;
+  /* Add a subtle border to give the buttons some depth */
+  border: 1px solid #ddd;
+  /* Add some margin to create space between the buttons */
+  margin: 10px;
+  /* Use a cursor pointer to indicate that the button is clickable */
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  /* Add a hover effect to make the buttons more interactive */
+  background-color: #337ab7;
+  color: #fff;
+  border-color: #337ab7;
+}
+
+.filter-btn:active {
+  /* Add an active effect to indicate that the button is being clicked */
+  background-color: #23527c;
+  border-color: #23527c;
+}
+
+/* Experience Container */
+.experience-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+  }
+  
+  .experience-grid {
+    display: inline-flex;
+    gap: 20px; /* Space between cards */
+  }
+  
+  .experience-card {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust card width as needed */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .experience-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .experience-card h3 {
+    margin: 10px;
+  }
+  
+  .experience-card p {
+    margin: 0 10px 10px;
+  }
+  
+  .filter-options {
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn {
+    margin-right: 10px;
+  }
+
+
+  /* General Styles */
+body {
+    font-family: sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  /* Virtual Reality Tours Section */
+  .vr-tours-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .vr-tour-links a {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .vr-tour-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Itinerary Builder Section */
+  .itinerary-builder-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #itinerary-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #itinerary-form label {
+    margin: 10px 0 5px;
+  }
+  
+  #itinerary-form input, #itinerary-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #itinerary-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #itinerary-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Local Events Calendar Section */
+  .events-calendar-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #calendar {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Travel Quiz Section */
+  .travel-quiz-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #quiz-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #quiz-form label {
+    margin: 10px 0 5px;
+  }
+  
+  #quiz-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #quiz-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #quiz-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* User-Generated Content Section */
+  .user-content-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #content-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #content-form label {
+    margin: 10px 0 5px;
+  }
+  
+  #content-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #content-form input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  #content-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #content-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Interactive Cultural Map Section */
+  .cultural-map-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #map {
+    height: 500px;
+    width: 100%;
+  }
+  
+  /* Language & Culture Tips Section */
+  .culture-tips-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .tips-content h3 {
+    margin-top: 0;
+  }
+  
+  /* Augmented Reality Guide Section */
+  .ar-guide-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Customized Travel Packages Section */
+  .travel-packages-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  #package-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #package-form label {
+    margin: 10px 0 5px;
+  }
+  
+  #package-form textarea, #package-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #package-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #package-form button:hover {
+    background-color: #0056b3;
+  }
+
+/* Local Cuisine Finder Section */
+.local-cuisine-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center; /* Center align the heading */
+  }
+  
+  .cuisine-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0; /* Add padding for scrollbar visibility */
+  }
+  
+  .cuisine-list {
+    display: inline-flex;
+    gap: 20px;
+  }
+  
+  .cuisine-item {
+    display: inline-block;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    perspective: 1000px; /* Adds perspective for the 3D effect */
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #eeecec;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-front p, .card-back p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: unset !important;
+}
+  
+  .card-back {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow of content */
+    text-wrap: wrap;
+  }
+  
+  /* Flip effect */
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  /* Optional: Scrollbar styling for WebKit browsers (Chrome, Safari) */
+  .cuisine-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .cuisine-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+  }
+  
+  .cuisine-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Fix text overflow in cards */
+  .card-front p, .card-back p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .card-front h3, .card-back h3 {
+    margin-top: 0;
+  }
+  
+  
+  /* Sustainable Travel Tips Section */
+  .sustainable-travel-section {
+    background-color: #e97272;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .sustainable-travel-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Interactive Travel Checklist Section */
+  .travel-checklist-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .travel-checklist-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .travel-checklist-section li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .travel-checklist-section input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  /* General Styles */
+h2 {
+    text-align: center;
+  }
+  
+  /* Specific Section Styles (if you want to apply center alignment only to certain sections) */
+  .vr-tours-section h2,
+  .itinerary-builder-section h2,
+  .events-calendar-section h2,
+  .travel-quiz-section h2,
+  .user-content-section h2,
+  .cultural-map-section h2,
+  .culture-tips-section h2,
+  .ar-guide-section h2,
+  .travel-packages-section h2,
+  .local-cuisine-section h2,
+  .sustainable-travel-section h2,
+  .travel-checklist-section h2 {
+    text-align: center;
+  }
+
+
+  .ar-guide-section {
+    /* Add some padding to create space around the section */
+    padding: 40px;
+    /* Use a background color to create a visual separation */
+    background-color: #f7f7f7;
+    /* Add a subtle box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ar-guide-section h2 {
+    /* Use a font size and color that stands out */
+    font-size: 24px;
+    color: #333;
+    /* Add some margin to create space between the heading and paragraph */
+    margin-bottom: 10px;
+  }
+  
+  .ar-guide-section p {
+    /* Use a font size and color that's easy to read */
+    font-size: 18px;
+    color: #666;
+    /* Add some margin to create space between the paragraph and the next element */
+    margin-bottom: 20px;
+  }
+  
+  /* Add a "coming soon" badge to make it more visually appealing */
+  .ar-guide-section p::after {
+    content: "Coming soon!";
+    font-size: 14px;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+
+  .sustainable-travel-section {
+    /* Add some padding to create space around the section */
+    padding: 40px;
+    /* Use a background color to create a visual separation */
+    background-color: #f7f7f7;
+    /* Add a subtle box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sustainable-travel-section h2 {
+    /* Use a font size and color that stands out */
+    font-size: 24px;
+    color: #333;
+    /* Add some margin to create space between the heading and list */
+    margin-bottom: 20px;
+  }
+  
+  .sustainable-travel-section ul {
+    /* Remove the default bullet points and add some padding */
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sustainable-travel-section li {
+    /* Add some margin to create space between list items */
+    margin-bottom: 10px;
+    /* Use a font size and color that's easy to read */
+    font-size: 18px;
+    color: #666;
+    /* Add a checkmark icon to make it more visually appealing */
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .sustainable-travel-section li::before {
+    content: "\2713"; /* Checkmark icon */
+    font-size: 20px;
+    color: #4CAF50; /* Green color for the checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+
+
+  .weather-info-section {
+    /* Add some padding to create space around the section */
+    padding: 40px;
+    /* Use a background color to create a visual separation */
+    background-color: #f7f7f7;
+    /* Add a subtle box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-info-section h2 {
+    /* Use a font size and color that stands out */
+    font-size: 24px;
+    color: #333;
+    /* Add some margin to create space between the heading and widget */
+    margin-bottom: 20px;
+  }
+  
+  .weather-info-section #weather-widget {
+    /* Add some padding to create space around the widget */
+    padding: 20px;
+    /* Use a background color to create a visual separation */
+    background-color: #fff;
+    /* Add a subtle border to give it some depth */
+    border: 1px solid #ddd;
+    /* Add some box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-info-section #weather-widget p {
+    /* Use a font size and color that's easy to read */
+    font-size: 18px;
+    color: #666;
+    /* Add some margin to create space between the paragraph and the next element */
+    margin-bottom: 20px;
+  }
+  
+  .vr-tours-section {
+    /* Add some padding to create space around the section */
+    padding: 40px;
+    /* Use a background color to create a visual separation */
+    background-color: #f7f7f7;
+    /* Add a subtle box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vr-tours-section h2 {
+    /* Use a font size and color that stands out */
+    font-size: 24px;
+    color: #333;
+    /* Add some margin to create space between the heading and paragraph */
+    margin-bottom: 20px;
+  }
+  
+  .vr-tours-section p {
+    /* Use a font size and color that's easy to read */
+    font-size: 18px;
+    color: #666;
+    /* Add some margin to create space between the paragraph and links */
+    margin-bottom: 30px;
+  }
+  
+  .vr-tour-links {
+    /* Add some padding to create space around the links */
+    padding: 20px;
+    /* Use a background color to create a visual separation */
+    background-color: #fff;
+    /* Add a subtle border to give it some depth */
+    border: 1px solid #ddd;
+    /* Add some box shadow to give it some depth */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vr-tour-links a {
+    /* Use a font size and color that's easy to read */
+    font-size: 18px;
+    color: #337ab7;
+    /* Add some margin to create space between links */
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .vr-tour-links a:hover {
+    /* Add a hover effect to make the links more interactive */
+    color: #23527c;
+    text-decoration: underline;
+  }

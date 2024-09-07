@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the beauty of India. Find the best destinations and plan your perfect trip.">
+    <title>NexVoyage - Tourism Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet.js CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>NexVoyage</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#trip-planner">Trip Planner</a></li>
+                <li><a href="#map">Interactive Map</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h2>Discover Incredible India</h2>
+            <p>From the majestic Himalayas to the tropical beaches of Goa, start your journey today!</p>
+            <a href="#destinations" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section id="destinations" class="destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card">
+                <img src="taj.jpeg"
+                    alt="Taj Mahal">
+                <h3>Agra</h3>
+                <p>The iconic symbol of love, Taj Mahal.</p>
+            </div>
+            <div class="destination-card">
+                <img src="Boat.jpeg"
+                    alt="Goa Beach">
+                <h3>Goa</h3>
+                <p>Experience the beautiful beaches and nightlife.</p>
+            </div>
+            <div class="destination-card">
+                <img src="mountain.jpeg"
+                    alt="Himalayas">
+                <h3>Himalayas</h3>
+                <p>Trek the towering peaks of the Himalayas.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Interactive Map Section -->
+        <section id="map" class="map-section">
+            <h2>Interactive Map</h2>
+            <div id="india-map"></div>
+        </section>
+
+
+
+
+
+<!-- Top Experiences Section -->
+<section id="experiences" class="experiences-section">
+    <h2>Top Experiences</h2>
+    
+    <!-- Filter Options -->
+    <div class="filter-options">
+      <button class="filter-btn" onclick="filterExperience('all')">All</button>
+      <button class="filter-btn" onclick="filterExperience('adventure')">Adventure</button>
+      <button class="filter-btn" onclick="filterExperience('culture')">Culture</button>
+      <button class="filter-btn" onclick="filterExperience('wildlife')">Wildlife</button>
+      <button class="filter-btn" onclick="filterExperience('relaxation')">Relaxation</button>
+    </div>
+  
+    <!-- Experience Cards -->
+    <div class="experience-container">
+      <div class="experience-grid">
+        <!-- Card 1: Trekking in the Himalayas (Adventure) -->
+        <div class="experience-card adventure">
+          <img src="trekking.jpeg" alt="Himalayan Trekking">
+          <h3>Trekking in the Himalayas</h3>
+        </div>
+  
+        <!-- Card 2: Scuba Diving in Andaman (Adventure) -->
+        <div class="experience-card adventure">
+          <img src="scooba.jpeg" alt="Scuba Diving">
+          <h3>Scuba Diving in Andaman</h3>
+          <p>         </p>
+        </div>
+  
+        <!-- Card 3: Desert Safari in Rajasthan (Adventure) -->
+        <div class="experience-card adventure">
+          <img src="safari.jpeg" alt="Desert Safari">
+          <h3>Desert Safari in Rajasthan</h3>
+        </div>
+  
+        <!-- Card 4: Kerala Kathakali Dance (Culture) -->
+        <div class="experience-card culture">
+          <img src="dance.jpeg" alt="Kathakali Dance">
+          <h3>Kathakali Dance in Kerala</h3>
+        </div>
+  
+        <!-- Additional Cards -->
+        <!-- Card 5: Ganga Aarti in Varanasi (Culture) -->
+        <div class="experience-card culture">
+          <img src="arti.jpeg" alt="Ganga Aarti">
+          <h3>Ganga Aarti in Varanasi</h3>
+        </div>
+  
+        <!-- Card 6: Ranthambore Tiger Safari (Wildlife) -->
+        <div class="experience-card wildlife">
+          <img src="tiger.jpeg" alt="Tiger Safari">
+          <h3>Ranthambore Tiger Safari</h3>
+        </div>
+  
+        <!-- Card 7: Houseboat Stay in Kerala (Relaxation) -->
+        <div class="experience-card relaxation">
+          <img src="houseboat.jpeg" alt="Kerala Houseboat">
+          <h3>Houseboat Stay in Kerala</h3>
+        </div>
+  
+        <!-- Card 8: Paragliding in Bir Billing (Adventure) -->
+        <div class="experience-card adventure">
+          <img src="gliding.jpeg" alt="Paragliding">
+          <h3>Paragliding in Bir Billing</h3>
+          <p></p>
+        </div>
+  
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+      <!-- Trip Planner Section -->
+      <section id="trip-planner" class="trip-planner">
+        <h2>Plan Your Trip</h2>
+        <form id="tripForm">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
+
+            <label for="dates">Travel Dates:</label>
+            <input type="date" id="start-date" name="start-date" required>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" max="20" value="1" required>
+
+            <label for="preferences">Travel Preferences:</label>
+            <select id="preferences" name="preferences">
+                <option value="adventure">Adventure</option>
+                <option value="culture">Culture & History</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="nature">Nature & Wildlife</option>
+            </select>
+
+            <button type="submit" class="btn">Plan My Trip</button>
+        </form>
+
+        <div id="trip-summary" class="trip-summary">
+            <!-- Summary will be displayed here after submission -->
+        </div>
+    </section>
+
+  <!-- Virtual Reality Tours Section -->
+<section id="vr-tours" class="vr-tours-section">
+  <h2>Virtual Reality Tours</h2>
+  <p>Experience popular destinations in India virtually!</p>
+  <div class="vr-tour-links">
+    <a href="https://artsandculture.google.com/streetview/taj-mahal/UQHf233TlFdrJA?sv_lng=78.04210616239266&sv_lat=27.17487147562364&sv_h=321.9627210813193&sv_p=-16.30995516755327&sv_pid=gltvTP_vwKEAAAGuoW-9LQ&sv_z=1" target="_blank">Taj Mahal VR Tour</a>
+    <a href="https://artsandculture.google.com/story/11-indian-sites-to-explore-from-home/UgLSzBxU0Mo7IQ" target="_blank">Delhi tour</a>
+    <!-- Add more VR tours as needed -->
+  </div>
+</section>
+  
+
+  <!-- Augmented Reality Guide Section -->
+<section id="ar-guide" class="ar-guide-section">
+  <h2>Augmented Reality Guide</h2>
+  <p>Experience landmarks with AR.</p>
+</section>
+
+  
+
+  <!-- Local Cuisine Finder Section -->
+<section id="local-cuisine" class="local-cuisine-section">
+    <h2>Discover Local Cuisine</h2>
+    <div class="cuisine-container">
+      <div class="cuisine-list">
+        <div class="cuisine-item">
+          <div class="card">
+            <div class="card-front">
+              <h3>Rogan Josh</h3>
+            </div>
+            <div class="card-back">
+              <p>Rogan Josh is a dish of tender lamb cooked in a rich and spicy sauce, characteristic of Kashmiri cuisine. Enjoy it with naan or rice.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cuisine-item">
+          <div class="card">
+            <div class="card-front">
+              <h3>Masala Dosa</h3>
+            </div>
+            <div class="card-back">
+              <p>Masala Dosa is a savory crepe made from rice and lentil batter, filled with a spiced potato mixture. It's a favorite breakfast dish in South India.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Butter Chicken</h3>
+              </div>
+              <div class="card-back">
+                <p>Butter Chicken is a rich and creamy dish made with marinated chicken cooked in a tomato-based sauce. It's best enjoyed with naan or rice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Chole Bhature</h3>
+              </div>
+              <div class="card-back">
+                <p>Chole Bhature features spicy chickpeas served with deep-fried bread. It’s a popular choice for a hearty breakfast or lunch.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Biryani</h3>
+              </div>
+              <div class="card-back">
+                <p>Biryani is a flavorful rice dish cooked with spices, meat, or vegetables. Each region has its own variation, including Hyderabadi and Lucknowi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Pani Puri</h3>
+              </div>
+              <div class="card-back">
+                <p>Pani Puri is a favorite street food made of crispy puris filled with spicy water, tamarind chutney, potatoes, and chickpeas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Palak Paneer</h3>
+              </div>
+              <div class="card-back">
+                <p>Palak Paneer features spinach cooked with cottage cheese in a flavorful sauce. It's commonly enjoyed with roti or rice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Dhokla</h3>
+              </div>
+              <div class="card-back">
+                <p>Dhokla is a steamed savory cake made from fermented rice and chickpea flour. It's a popular snack from Gujarat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Ras Malai</h3>
+              </div>
+              <div class="card-back">
+                <p>Ras Malai is a popular Indian dessert made from soft cheese dumplings soaked in sweet, creamy milk flavored with cardamom and saffron.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Vada Pav</h3>
+              </div>
+              <div class="card-back">
+                <p>Vada Pav is a popular street food from Mumbai, featuring a spicy potato fritter served in a bun, often enjoyed with chutneys and fried green chilies.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cuisine-item">
+            <div class="card">
+              <div class="card-front">
+                <h3>Khichdi</h3>
+              </div>
+              <div class="card-back">
+                <p>Khichdi is a comforting, easy-to-digest dish made with rice and lentils cooked together with spices. It’s often served as a wholesome meal.</p>
+              </div>
+            </div>
+          </div>
+        <!-- Add more cuisine items as needed -->
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+  <!-- Sustainable Travel Tips Section -->
+<section id="sustainable-travel" class="sustainable-travel-section">
+  <h2>Sustainable Travel Tips</h2>
+  <ul>
+    <li>Use public transport or shared rides.</li>
+    <li>Support local businesses and communities.</li>
+    <li>Avoid single-use plastics and minimize waste.</li>
+  </ul>
+</section>
+  
+  
+<!-- Weather Information Section -->
+<section id="weather-info" class="weather-info-section">
+  <h2>Weather Information</h2>
+  <div id="weather-widget">
+    <p>Check the weather forecast for your destination? I wonder what the weather is... hmm. Check your weathers app for now.</p>
+  </div>
+</section>
+  
+  <!-- You might integrate a weather API here -->
+  
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About NexVoyage</h2>
+        <p>NexVoyage is your gateway to the incredible destinations, rich culture, and natural beauty of India. Our
+            goal is to help travelers discover the best experiences in India, from historical landmarks to hidden gems.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions or need help planning your trip? Reach out to us at:</p>
+        <p>Email: support@exploreindia.com</p>
+        <p>Phone: +91-123-456-7890</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 NexVoyage. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
